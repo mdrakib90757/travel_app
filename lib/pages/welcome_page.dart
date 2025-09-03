@@ -12,13 +12,12 @@ class WelcomePage extends StatefulWidget {
 }
 
 class _WelcomePageState extends State<WelcomePage> {
-
-  List image=[
+  List image = [
+    "assets/image/image1.jpg",
     "assets/image/wlc.png",
-  "assets/image/6221846.jpg",
+    "assets/image/6221846.jpg",
     "assets/image/image.jpg",
     "assets/image/snowy-mountains-sunset.jpg",
-
   ];
   @override
   Widget build(BuildContext context) {
@@ -32,12 +31,12 @@ class _WelcomePageState extends State<WelcomePage> {
             height: double.maxFinite,
             decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage("${image[index]}"),
-                fit: BoxFit.cover
-              )
+                image: AssetImage("${image[index]}"),
+                fit: BoxFit.cover,
+              ),
             ),
             child: Container(
-              margin: EdgeInsets.only(top: 150,left: 20,right: 20),
+              margin: EdgeInsets.only(top: 150, left: 20, right: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -45,38 +44,43 @@ class _WelcomePageState extends State<WelcomePage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       AppLargeText(text: "Trips"),
-                      AppText(text: "Mountain",size: 30,),
-                     SizedBox(height: 20,),
-                     Container(
-                       width: 250,
-                       child: AppText(text: "Mountain hikes give you an "
-                           "incredible sense of freedom along with endurance tests",
-                       color:AppColors.textColor2,
-                         size: 14,
-                       ),
-                     ),
-                      SizedBox(height: 20,),
-                      ResponsiveButton(width: 100,)
-
+                      AppText(text: "Mountain", size: 30),
+                      SizedBox(height: 20),
+                      Container(
+                        width: 250,
+                        child: AppText(
+                          text:
+                              "Mountain hikes give you an "
+                              "incredible sense of freedom along with endurance tests",
+                          color: AppColors.textColor2,
+                          size: 14,
+                        ),
+                      ),
+                      SizedBox(height: 20),
+                      ResponsiveButton(width: 100),
                     ],
                   ),
                   Column(
-                    children:List.generate(3, (index) {
+                    children: List.generate(3, (indexDots) {
                       return Container(
+                        margin: EdgeInsets.only(bottom: 2),
                         width: 8,
-                        height: 25,
+                        height: index == indexDots ? 25 : 8,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
-                          color: AppColors.mainColor
+                          color: index == indexDots
+                              ? AppColors.mainColor
+                              : AppColors.mainColor.withOpacity(0.3),
                         ),
                       );
-                    },)
-                  )
+                    }),
+                  ),
                 ],
               ),
             ),
           );
-      },),
+        },
+      ),
     );
   }
 }
