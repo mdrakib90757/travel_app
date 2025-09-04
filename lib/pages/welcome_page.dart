@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app/pages/nav_pages/main_pages/main_pages.dart';
 import 'package:travel_app/utils/app_color.dart';
 import 'package:travel_app/widget/app_large_text/app_large_text.dart';
 import 'package:travel_app/widget/app_text/app_text.dart';
@@ -13,7 +14,9 @@ class WelcomePage extends StatefulWidget {
 
 class _WelcomePageState extends State<WelcomePage> {
   List image = [
+    "assets/image/welcome-one.png",
     "assets/image/image1.jpg",
+    "assets/image/mountain.jpeg",
     "assets/image/wlc.png",
     "assets/image/6221846.jpg",
     "assets/image/image.jpg",
@@ -57,7 +60,18 @@ class _WelcomePageState extends State<WelcomePage> {
                         ),
                       ),
                       SizedBox(height: 20),
-                      ResponsiveButton(width: 100),
+                      InkWell(
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MainPagesNavPage(),
+                          ),
+                        ),
+                        child: ResponsiveButton(
+                          isResponsive: false,
+                          width: 100,
+                        ),
+                      ),
                     ],
                   ),
                   Column(
