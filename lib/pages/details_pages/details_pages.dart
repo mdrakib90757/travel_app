@@ -33,15 +33,15 @@ class _DetailsPagesState extends State<DetailsPages> {
             ),
 
             //Menu Icon
-            Positioned(
-              left: 20,
-              top: 50,
-              child: Row(
-                children: [
-                  IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
-                ],
-              ),
-            ),
+            // Positioned(
+            //   left: 20,
+            //   top: 50,
+            //   child: Row(
+            //     children: [
+            //       IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
+            //     ],
+            //   ),
+            // ),
 
             Positioned(
               top: 430,
@@ -162,8 +162,8 @@ class _DetailsPagesState extends State<DetailsPages> {
 
             Positioned(
               bottom: 15,
-              left: 20,
-              right: 20,
+              left: 30,
+              right: 30,
               child: Row(
                 children: [
                   AppButtons(

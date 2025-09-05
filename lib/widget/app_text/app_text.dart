@@ -25,7 +25,6 @@ class AppText extends StatelessWidget {
     return Text(
       maxLines: maxLines,
       overflow: textOverflow,
-
       text,
       style: TextStyle(color: color, fontSize: size),
     );

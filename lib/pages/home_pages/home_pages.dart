@@ -14,12 +14,13 @@ class HomePages extends StatefulWidget {
 
 class _HomePagesState extends State<HomePages> with TickerProviderStateMixin {
   var image = {
-    "assets/image/6221846.jpg": "Balloning",
-    "assets/image/image.jpg": "Hiking",
-    "assets/image/wlc.png": "Kayaking",
-    "assets/image/snowy-mountains-sunset.jpg": "Snorking",
+    "assets/image1/balloning.png": "Balloning",
+    "assets/image1/hiking.png": "Hiking",
+    "assets/image1/kayaking.png": "Kayaking",
+    "assets/image1/snorkling.png": "Snorking",
     "assets/image/image1.jpg": "mountain",
   };
+
   List images = [
     "assets/image/wlc.png",
     "assets/image/image.jpg",
@@ -53,6 +54,7 @@ class _HomePagesState extends State<HomePages> with TickerProviderStateMixin {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.grey.withOpacity(0.5),
                     ),
+                    child: Image.asset("assets/image1/traveller.png"),
                   ),
                 ],
               ),
@@ -69,7 +71,7 @@ class _HomePagesState extends State<HomePages> with TickerProviderStateMixin {
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: TabBar(
-                  labelPadding: EdgeInsets.only(left: 0, right: 20),
+                  labelPadding: EdgeInsets.only(right: 20),
                   labelColor: Colors.black,
                   unselectedLabelColor: Colors.grey,
                   dividerColor: Colors.transparent,

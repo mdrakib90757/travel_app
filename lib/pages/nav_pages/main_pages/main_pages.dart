@@ -37,7 +37,6 @@ class _MainPagesNavPageState extends State<MainPagesNavPage> {
         showUnselectedLabels: false,
         showSelectedLabels: false,
         elevation: 0,
-
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.apps), label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.bar_chart), label: "bar"),
